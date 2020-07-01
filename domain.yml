@@ -1,0 +1,82 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - reply_name
+  - say_name
+  - tired
+  - ask_love
+  - ask_reason
+  - thanks
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_hiAgain
+- utter_askToday
+- utter_askName
+- utter_sayReason
+- utter_sayLove
+- utter_yourWecome
+- action_great_again
+
+entities:
+  - person_name
+
+slots:
+  person_name:
+    type: text
+    initial_value: "ヌ"
+
+responses:
+  utter_greet:
+  - text: "はじめまして! 元気ですか?"
+  - text: "こんばんは! 元気ですか?"
+  - text: "こんにちは! 元気ですか?"
+
+  utter_cheer_up:
+  - text: "ファイティング！私の主人はいつも{person_name}さんのそばいるよ"
+
+  utter_did_that_help:
+  - text: "なにかてづだえますか?"
+
+  utter_happy:
+  - text: "喜んで!"
+
+  utter_goodbye:
+  - text: "さようなら"
+
+  utter_iamabot:
+  - text: "ボット"
+
+  utter_askName:
+  - text: "お名前は"
+
+  utter_askToday:
+  - text: "今日は忙しいですか"
+
+  utter_hiAgain:
+  - text: "{person_name}さんですね。ボットです。私をうまれる目的はなんと知ってますか。"
+
+  utter_sayReason:
+    - text: "{person_name}のためですよ。お誕生日おめでとう。"
+
+  utter_sayLove:
+    - text: "答えるを知っているでしょう？　フック様ですよ。"
+    - text: "当然フック主人です。そんな事私のように機械でも知っているよ。"
+
+  utter_yourWecome:
+    - text: "いいえ。{person_name}が喜んで良かったね"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
